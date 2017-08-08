@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- order属性用来设置视图解析器的优先级,order值越低，则优先级越高-->
+    <bean class="ai.code.mikasa.web.viewresolver.GenericFileViewResolver"
+          p:order="0"/>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+        p:contentType="text/html;charset=UTF-8"
+        p:prefix="/WEB-INF/views/"
+        p:suffix=".jsp"
+        p:order="1"/>
+
+
+       <!-- 配置springmvc返回json -->
+       <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">-->
+          <!--<property name="messageConverters">-->
+              <!--<list>-->
+                 <!--<bean class="org.springframework.http.converter.StringHttpMessageConverter">-->
+                     <!--<property name="supportedMediaTypes">-->
+                        <!--<list>-->
+                            <!--&lt;!&ndash;<value>text/html; charset=UTF-8</value>&ndash;&gt;-->
+                            <!--<value>application/json;charset=UTF-8</value>-->
+                        <!--</list>-->
+                     <!--</property>-->
+                 <!--</bean>-->
+                 <!--<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">-->
+                     <!--<property name="supportedMediaTypes">-->
+                        <!--<list>-->
+                            <!--&lt;!&ndash;<value>text/html; charset=UTF-8</value>&ndash;&gt;-->
+                            <!--<value>application/json;charset=UTF-8</value>-->
+                        <!--</list>-->
+                     <!--</property>-->
+                 <!--</bean>-->
+              <!--</list>-->
+          <!--</property>-->
+       <!--</bean>-->
+
+</beans>

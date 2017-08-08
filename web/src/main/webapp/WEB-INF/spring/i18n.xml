@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!-- 国际化配置 -->
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="defaultEncoding" value="utf-8"/>
+        <!-- 最佳实践将useCodeAsDefaultMessage设置为false， 可以尽早发现本地化文件中缺失的key -->
+        <property name="useCodeAsDefaultMessage" value="false" />
+        <!-- 指定缓存时间-->
+        <property name="cacheSeconds" value="86400"></property>
+        <property name="basenames">
+            <list>
+                <value>classpath:locale/express</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- 定义国际化判断当前语言解析器 -->
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+        <property name="cookieMaxAge" value="604800"/>
+        <property name="cookieName" value="lang"></property>
+    </bean>
+
+    <!--指定拦截器， 可以通过查询字符串locale=zh_CN切换语言方便调试-->
+    <mvc:interceptors>
+        <!-- 国际化拦截器 -->
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />
+    </mvc:interceptors>
+
+
+</beans>

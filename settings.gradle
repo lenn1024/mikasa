@@ -1,0 +1,8 @@
+rootProject.name = 'mikasa'
+include 'basic'
+include 'advance'
+include 'design-pattern'
+include 'mq'
+include 'spring'
+include 'web'
+
