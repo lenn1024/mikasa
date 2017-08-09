@@ -11,4 +11,27 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    // javaEE
+    compile 'javax.servlet:servlet-api:2.5'
+
+    // json-libs
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.6.1'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.6.1'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.6.1'
+
+    // aspect
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.8.9'
+    compile group: 'org.aspectj', name: 'aspectjrt', version: '1.8.9'
+
+    // https://mvnrepository.com/artifact/com.rabbitmq/amqp-client
+    compile group: 'com.rabbitmq', name: 'amqp-client', version: '3.6.5'
+
+//    // https://mvnrepository.com/artifact/org.icepdf/icepdf-core
+//    compile group: 'org.icepdf.os', name: 'icepdf-core', version: '6.1.2'
+//    // https://mvnrepository.com/artifact/org.icepdf/icepdf-viewer
+//    compile group: 'org.icepdf.os', name: 'icepdf-viewer', version: '6.1.2'
+//
+//    // https://mvnrepository.com/artifact/org.swinglabs/pdf-renderer
+//    compile group: 'org.swinglabs', name: 'pdf-renderer', version: '1.0.5'
 }

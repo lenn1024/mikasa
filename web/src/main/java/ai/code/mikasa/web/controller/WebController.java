@@ -16,13 +16,13 @@ public class WebController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     @ResponseBody
     public String index(){
-        return "hello sakura.";
+        return "hello mikasa.";
     }
 
     @RequestMapping(value = "/test/{id}", method = RequestMethod.GET)
     @ResponseBody
     public String testId(@PathVariable int id){
-        return "hello sakura. id:" + id;
+        return "hello mikasa. id:" + id;
     }
 
     @RequestMapping(value = "/test", method = RequestMethod.GET)

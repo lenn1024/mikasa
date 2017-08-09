@@ -119,3 +119,4 @@ Temporary Items
 # ================================
 doc/out
 doc/node_modules
+**/out/
