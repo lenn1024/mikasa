@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Lenn on 2017/6/2.
  */
@@ -21,8 +24,10 @@ public class WebController {
 
     @RequestMapping(value = "/test/{id}", method = RequestMethod.GET)
     @ResponseBody
-    public String testId(@PathVariable int id){
-        return "hello mikasa. id:" + id;
+    public Map<String, Integer> testId(@PathVariable int id){
+        Map<String, Integer> map = new HashMap<>();
+        map.put("id", id);
+        return map;
     }
 
     @RequestMapping(value = "/test", method = RequestMethod.GET)

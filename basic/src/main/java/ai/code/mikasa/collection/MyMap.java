@@ -4,6 +4,8 @@ package ai.code.mikasa.collection;
  * Created by lenn on 16/9/18.
  */
 
+import ai.code.mikasa.annotation.Joy;
+
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
@@ -17,6 +19,7 @@ import java.util.Map;
  * 当一个map填满了75%的bucket时, 和其他集合类(如ArrayList)一样,将会创建原来HashMap大小的两倍的bucket数组,
  * 来重新调整map的大小,并将原来的对象放入新的bucket数组中.这个过程叫作rehashing,因为它调用hash方法找到新的bucket位置.
  */
+@Joy("joy")
 public class MyMap {
     public static void main(String[] args){
 
