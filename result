@@ -1,0 +1,506 @@
+{
+    "code": 1,
+    "msg": "成功",
+    "productFareSignList": [
+        {
+            "freeShippingFlag": false,
+            "skuId": 1,
+            "venderId": 29028
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 2,
+            "venderId": 50468
+        },
+        {
+            "freeShippingFlag": true,
+            "skuId": 3,
+            "venderId": 48064
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 4,
+            "venderId": 19202
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 5,
+            "venderId": 51386
+        },
+        {
+            "freeShippingFlag": true,
+            "skuId": 6,
+            "venderId": 39475
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 7,
+            "venderId": 49312
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 8,
+            "venderId": 50595
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 9,
+            "venderId": 26346
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 10,
+            "venderId": 27495
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 11,
+            "venderId": 48600
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 12,
+            "venderId": 19938
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 13,
+            "venderId": 44104
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 14,
+            "venderId": 31713
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 15,
+            "venderId": 51348
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 16,
+            "venderId": 47278
+        },
+        {
+            "freeShippingFlag": true,
+            "skuId": 17,
+            "venderId": 26815
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 18,
+            "venderId": 47934
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 19,
+            "venderId": 35718
+        },
+        {
+            "freeShippingFlag": true,
+            "skuId": 20,
+            "venderId": 32029
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 21,
+            "venderId": 32348
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 22,
+            "venderId": 44488
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 23,
+            "venderId": 40828
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 24,
+            "venderId": 24647
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 25,
+            "venderId": 27675
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 26,
+            "venderId": 42112
+        },
+        {
+            "freeShippingFlag": true,
+            "skuId": 27,
+            "venderId": 48350
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 28,
+            "venderId": 44488
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 29,
+            "venderId": 50779
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 30,
+            "venderId": 31351
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 31,
+            "venderId": 15483
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 32,
+            "venderId": 35056
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 33,
+            "venderId": 21307
+        },
+        {
+            "freeShippingFlag": true,
+            "skuId": 34,
+            "venderId": 50764
+        },
+        {
+            "freeShippingFlag": true,
+            "skuId": 35,
+            "venderId": 18306
+        },
+        {
+            "freeShippingFlag": true,
+            "skuId": 36,
+            "venderId": 46929
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 37,
+            "venderId": 49408
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 38,
+            "venderId": 35308
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 39,
+            "venderId": 49412
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 40,
+            "venderId": 22941
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 41,
+            "venderId": 22124
+        },
+        {
+            "freeShippingFlag": true,
+            "skuId": 42,
+            "venderId": 44253
+        },
+        {
+            "freeShippingFlag": true,
+            "skuId": 43,
+            "venderId": 44279
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 44,
+            "venderId": 1000562
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 45,
+            "venderId": 27168
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 46,
+            "venderId": 32372
+        },
+        {
+            "freeShippingFlag": true,
+            "skuId": 47,
+            "venderId": 44279
+        },
+        {
+            "freeShippingFlag": true,
+            "skuId": 48,
+            "venderId": 41217
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 49,
+            "venderId": 45494
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 50,
+            "venderId": 41494
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 51,
+            "venderId": 27068
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 52,
+            "venderId": 18377
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 53,
+            "venderId": 10870
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 54,
+            "venderId": 44940
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 55,
+            "venderId": 50381
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 56,
+            "venderId": 29617
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 57,
+            "venderId": 50656
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 58,
+            "venderId": 28063
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 59,
+            "venderId": 50725
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        },
+        {
+            "freeShippingFlag": false,
+            "skuId": 60,
+            "venderId": 10379
+        }
+    ]
+}

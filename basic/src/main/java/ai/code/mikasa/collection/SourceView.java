@@ -1,5 +1,6 @@
 package ai.code.mikasa.collection;
 
+import java.math.BigDecimal;
 import java.util.*;
 
 /**
@@ -42,5 +43,13 @@ public class SourceView {
 
 
     public SourceView() {
+    }
+
+    public static void main(String[] args){
+//        System.out.println(SourceView.class.getSimpleName());
+//        System.out.println(SourceView.class.getName());
+        BigDecimal fare = new BigDecimal(0.0100);
+        System.out.println(fare);
+        System.out.println(new BigDecimal("0.0100"));
     }
 }
