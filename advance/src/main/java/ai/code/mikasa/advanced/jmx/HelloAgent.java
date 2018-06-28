@@ -1,6 +1,5 @@
 package ai.code.mikasa.advanced.jmx;
 
-import com.sun.jdmk.comm.HtmlAdaptorServer;
 
 import javax.management.*;
 import javax.management.remote.JMXConnectorServer;
@@ -24,9 +23,9 @@ public class HelloAgent {
 // Distributed Layer, 提供了一个HtmlAdaptor。支持Http访问协议，并且有一个不错的HTML界面，这里的Hello就是用这个作为远端管理的界面
 // 事实上HtmlAdaptor是一个简单的HttpServer，它将Http请求转换为JMX Agent的请求
         ObjectName adapterName = new ObjectName(domainName+":name=htmladapter,port=8082");
-        HtmlAdaptorServer adapter = new HtmlAdaptorServer();
-        adapter.start();
-        mbs.registerMBean(adapter,adapterName);
+//        HtmlAdaptorServer adapter = new HtmlAdaptorServer();
+//        adapter.start();
+//        mbs.registerMBean(adapter,adapterName);
 
         int rmiPort = 1099;
         Registry registry = LocateRegistry.createRegistry(rmiPort);
