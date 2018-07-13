@@ -1,12 +1,11 @@
 package ai.code.mikasa;
 
 import ai.code.mikasa.annotation.Joy;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.*;
+import org.junit.runners.MethodSorters;
 
 import java.io.Serializable;
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,6 +13,7 @@ import java.util.List;
 import java.util.concurrent.*;
 
 @Joy("test annotation")
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MyTest<T> implements Serializable, Cloneable {
 
     private List<String> list;
@@ -154,4 +154,18 @@ public class MyTest<T> implements Serializable, Cloneable {
         System.out.println(a == b);
     }
 
+    @Test
+    public void test11(){
+        Annotation[] annotations = MyTest.class.getAnnotations();
+        for(Annotation annotation: annotations){
+            if(annotation.annotationType() == Joy.class){
+                System.out.println("annotation test.");
+            }
+        }
+    }
+
+    @Test
+    public void test12(){
+        System.getProperties().list(System.out);
+    }
 }
