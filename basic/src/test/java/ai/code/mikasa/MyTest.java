@@ -168,4 +168,27 @@ public class MyTest<T> implements Serializable, Cloneable {
     public void test12(){
         System.getProperties().list(System.out);
     }
+
+    interface TestClass{
+    }
+
+    class AbstractTestClass implements TestClass {}
+
+    class TestClassImpl extends AbstractTestClass implements TestClass{}
+
+    @Test
+    public void test13(){
+        List<String> list = Arrays.asList("apple", "pear", "banana");
+        for(Class clazz: TestClassImpl.class.getInterfaces()){
+            System.out.println(clazz);
+        }
+    }
+
+    @Test
+    public void test14(){
+        List<String> list = new ArrayList<>();
+        System.out.println(list.size());
+        ((ArrayList<String>) list).ensureCapacity(7);
+        System.out.println(list.size());
+    }
 }
