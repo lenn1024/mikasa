@@ -115,6 +115,18 @@ public class ZKClient{
         zkInstance.delete(path, -1);
     }
 
+    /**
+     * 判断ZNode是否存在
+     * @param path
+     * @return
+     * @throws KeeperException
+     * @throws InterruptedException
+     */
+    public Stat exists(String path) throws KeeperException, InterruptedException {
+        return zkInstance.exists(path, false);
+    }
+
+
     public static void main(String[] args){
         ZKClient zkClient = new ZKClient("127.0.0.1:2181", 5000);
         try {
@@ -124,13 +136,39 @@ public class ZKClient{
             List<String> nodes = zkClient.getChildren("/");
             nodes.forEach(node -> System.out.println(node));
 
+            // get sequence children
+            List<String> seqNodes = zkClient.getChildren("/locks");
+            seqNodes.forEach(node -> System.out.println(node));
+
             // get data
             Stat stat = new Stat();
-            zkClient.getData("/test", false, stat);
+            byte[] data = zkClient.getData("/test", false, stat);
+            System.out.println("call method getData:");
+            System.out.println(new String(data));
             System.out.println(stat);
 
-            // delete node
-            zkClient.delete("/lenn/node1");
+            // exists
+            Stat node1Stat = zkClient.exists("/lenn/node1");
+            if(node1Stat != null){
+                System.out.println("/lenn/node1 节点存在。" );
+                // delete node
+                zkClient.delete("/lenn/node1");
+            }else {
+                System.out.println("/lenn/node1 节点不存在。" );
+            }
+
+            List<String> children = zkClient.getChildren("/locks");
+            System.out.println(children);
+
+//            children.forEach(child -> {
+//                try {
+//                    zkClient.delete("/locks/" + child);
+//                } catch (KeeperException e) {
+//                    e.printStackTrace();
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//            });
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
