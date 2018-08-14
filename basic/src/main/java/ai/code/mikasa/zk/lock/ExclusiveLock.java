@@ -1,4 +1,4 @@
-package ai.code.mikasa.zk;
+package ai.code.mikasa.zk.lock;
 
 import org.apache.zookeeper.*;
 import org.apache.zookeeper.KeeperException.NodeExistsException;

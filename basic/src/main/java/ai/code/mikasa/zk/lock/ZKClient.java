@@ -1,4 +1,4 @@
-package ai.code.mikasa.zk;
+package ai.code.mikasa.zk.lock;
 
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.KeeperException;
