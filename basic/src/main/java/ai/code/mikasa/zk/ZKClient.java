@@ -51,6 +51,7 @@ public class ZKClient{
         CountDownLatch countDownLatch = new CountDownLatch(1);
 
         this.zkInstance = new ZooKeeper(connStr, sessionTimeout, event -> {
+            logger.info("event happened:{}.", event);
             if(event.getState() == Watcher.Event.KeeperState.SyncConnected){
                 logger.info("connected zk server.");
                 countDownLatch.countDown();
@@ -90,7 +91,7 @@ public class ZKClient{
      * @throws InterruptedException
      */
     public List<String> getChildren(String path) throws KeeperException, InterruptedException {
-        return zkInstance.getChildren(path, false);
+        return zkInstance.getChildren(path, true);
     }
 
     /**
@@ -123,7 +124,7 @@ public class ZKClient{
      * @throws InterruptedException
      */
     public Stat exists(String path) throws KeeperException, InterruptedException {
-        return zkInstance.exists(path, false);
+        return zkInstance.exists(path, true);
     }
 
 
@@ -142,7 +143,7 @@ public class ZKClient{
 
             // get data
             Stat stat = new Stat();
-            byte[] data = zkClient.getData("/test", false, stat);
+            byte[] data = zkClient.getData("/test", true, stat);
             System.out.println("call method getData:");
             System.out.println(new String(data));
             System.out.println(stat);
@@ -169,6 +170,10 @@ public class ZKClient{
 //                    e.printStackTrace();
 //                }
 //            });
+
+            new CountDownLatch(1).await();
+
+            zkClient.getZkInstance().close();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {

@@ -114,7 +114,7 @@ public class ExclusiveLock {
      */
     public void unLock(){
         if(!isOwnLock){
-            throw new IllegalStateException("Illegal Operation: can not unlock the lock if this thread does not own the lock.");
+            throw new IllegalStateException(getThreadName() + " - Illegal Operation: can not unlock the lock if this thread does not own the lock.");
         }
 
         try {
@@ -148,9 +148,22 @@ public class ExclusiveLock {
                 try {
                     // 再次尝试加锁
                     zkClient.getZkInstance().create(getLockPath(), "".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
+                    logger.info(getThreadName() + " 抢占锁成功.");
                     countDownLatch.countDown();
+                    isOwnLock = true;
                 } catch (KeeperException e1) {
-                    e1.printStackTrace();
+                    // Watcher注册只能确保一次消费
+                    // e1.printStackTrace();
+                    if(e1.code() == NodeExistsException.Code.NODEEXISTS){
+                        logger.info(getThreadName() + ": 锁已被抢占，等待下次再抢。");
+                        try {
+                            zkClient.getZkInstance().exists(getLockPath(), new NodeDeleteWatcher());
+                        } catch (KeeperException e2) {
+                            e1.printStackTrace();
+                        } catch (InterruptedException e2) {
+                            e1.printStackTrace();
+                        }
+                    }
                 } catch (InterruptedException e1) {
                     e1.printStackTrace();
                 }
