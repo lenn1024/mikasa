@@ -20,13 +20,14 @@ public class Producer implements Runnable, Printable {
             synchronized (signal){
                 String threadName = Thread.currentThread().getName();
                 // limit 为 20
-                if(list.size() == 20){
+                // 只能用while，不能用if
+                while (list.size() == 1){
                     print(threadName, "容器已达上限，进入等待状态");
                     wait();
                 }
                 print(threadName, "生产一个产品放入容器。");
                 list.add(new Object());
-                signal.notifyAll();
+                signal.notify();
             }
         }catch (InterruptedException e) {
             e.printStackTrace();

@@ -19,14 +19,14 @@ public class Consumer implements Runnable, Printable {
         try {
             String threadName = Thread.currentThread().getName();
             synchronized (signal){
-                if(list.size() == 0){
+                while (list.size() == 0){
                     print(threadName, "容器中已没有商品，进入等待状态。");
                     signal.wait();
                 }
                 // 消费掉
                 print(threadName, "消费掉一个商品。");
                 list.remove(0);
-                signal.notifyAll();
+                signal.notify();
             }
         }catch (InterruptedException e) {
             e.printStackTrace();

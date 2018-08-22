@@ -8,17 +8,17 @@ public class Main {
         List<Object> container = new ArrayList<>();
         Object signal = new Object();
         // 构造10个生产者线程
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 5; i++){
             new Thread(new Producer(container, signal)).start();
         }
 
         // 构造10个消费者线程
-        for(int i = 0; i < 10; i++){
+        for(int i = 0; i < 5; i++){
             new Thread(new Consumer(container, signal)).start();
         }
 
         // 睡1s
-        Thread.sleep(10000);
+        Thread.sleep(1000);
         System.out.println(container);
     }
 }
