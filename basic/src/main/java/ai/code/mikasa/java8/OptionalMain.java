@@ -1,4 +1,4 @@
-package ai.code.mikasa.optional;
+package ai.code.mikasa.java8;
 
 import java.util.Optional;
 
