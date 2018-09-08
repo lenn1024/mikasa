@@ -1,4 +1,4 @@
-package ai.code.mikasa.test;
+package ai.code.mikasa.test.queen8;
 
 public class EightQueen {
     private int n = 8;
