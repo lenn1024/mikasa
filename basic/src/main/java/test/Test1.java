@@ -44,7 +44,7 @@ public class Test1 {
         System.out.println(statistics);
 
         Optional<String> optional = null;
-        Optional.of(null);
+        Optional.ofNullable(null);
     }
 
 }
