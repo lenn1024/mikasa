@@ -2,6 +2,9 @@ package leetcode;
 
 import java.util.Stack;
 
+/**
+ * 构造一棵只有右子树的最大深度树
+ */
 public class S897 {
 
     public static void main(String[] args){
