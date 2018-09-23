@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class Solution101 {
+public class S101 {
 
     public static void main(String[] args){
 
