@@ -1,13 +1,19 @@
 package leetcode;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class S745 {
 
     public static void main(String[] args){
-        WordFilter wordFilter = new WordFilter(new String[]{"abbbababbb","baaabbabbb","abababbaaa","abbbbbbbba","bbbaabbbaa","ababbaabaa","baaaaabbbb","babbabbabb","ababaababb","bbabbababa"});
+        WordFilterV1 wordFilter = new WordFilterV1(new String[]{"abbbababbb","baaabbabbb","abababbaaa","abbbbbbbba","bbbaabbbaa","ababbaabaa","baaaaabbbb","babbabbabb","ababaababb","bbabbababa"});
         int index = wordFilter.f("babbab", "");
 //        index = wordFilter.f("b", "");
     }
 
+    /**
+     * 执行时间过长
+     */
     static class WordFilter {
 
         private String[] words;
@@ -27,18 +33,58 @@ public class S745 {
                     return -1;
                 }
 
+                // 前缀匹配
+                boolean prefixHit = true;
+                boolean suffixHit = true;
+
                 for(int j = 0; j < prefixLength; j++){
                     if(words[i].charAt(j) != prefix.charAt(j)){
-                        return -1;
+                        prefixHit = false;
+                        break;
                     }
                 }
 
-                for(int k = 0; k < suffixLength; k++){
-                    if(words[i].charAt(length - k - 1) != suffix.charAt(suffixLength - k -1)){
-                        return -1;
+                if(prefixHit){
+                    for(int k = 0; k < suffixLength; k++){
+                        if(words[i].charAt(length - k - 1) != suffix.charAt(suffixLength - k -1)){
+                            suffixHit = false;
+                            break;
+                        }
                     }
                 }
-                return i;
+                if(prefixHit && suffixHit){
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+    }
+
+    static class WordFilterV1{
+        private String[] words;
+        private Map<String, Integer> map = new HashMap<>();
+
+        public WordFilterV1(String[] words) {
+            int index = 0;
+            for(String word: words){
+                int len = word.length();
+                for(int i = 0; i <= len; i++){
+                    for(int j = 0; j <= len; j++){
+                        String prefix = word.substring(0, i);
+                        String suffix = word.substring(len - j, len);
+                        String key = prefix + "#" + suffix;
+                        map.put(key, index);
+                    }
+                }
+                index++;
+            }
+        }
+
+        public int f(String prefix, String suffix) {
+            Integer index = map.get(prefix + "#" + suffix);
+            if(index != null){
+                return index;
             }
 
             return -1;
