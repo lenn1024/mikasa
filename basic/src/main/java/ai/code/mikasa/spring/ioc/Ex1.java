@@ -10,8 +10,13 @@ public class Ex1 {
     public static void main(String[] args){
         ApplicationContext context = new ClassPathXmlApplicationContext("spring/ioc/ex1.xml");
 
+        TestClass privateClass = (TestClass) context.getBean("testClass");
+
         Lenn lenn = (Lenn)context.getBean("lenn");
 
         System.out.println(lenn.getLike());
+
+        privateClass.setName("dudu");
+        System.out.println(privateClass);
     }
 }

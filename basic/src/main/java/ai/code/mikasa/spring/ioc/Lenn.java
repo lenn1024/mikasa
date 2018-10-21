@@ -17,7 +17,7 @@ public class Lenn implements BeanNameAware, BeanFactoryAware, ApplicationContext
         //        Proxy.newProxyInstance()
     }
 
-    public Lenn(String like) {
+    private Lenn(String like) {
         this.like = like;
     }
 
