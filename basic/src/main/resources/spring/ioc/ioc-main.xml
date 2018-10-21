@@ -5,8 +5,10 @@
 
     <bean id="testClass" class="ai.code.mikasa.spring.ioc.TestClass"/>
 
-    <bean id="lenn" class="ai.code.mikasa.spring.ioc.Lenn">
-        <constructor-arg index="0" value="waw"></constructor-arg>
-    </bean>
+    <bean id="beanLifeCycle" class="ai.code.mikasa.spring.ioc.BeanLifeCycle"/>
+
+    <!--<bean id="beanLifeCycle" class="ai.code.mikasa.spring.ioc.BeanLifeCycle">-->
+        <!--<constructor-arg index="0" value="waw"></constructor-arg>-->
+    <!--</bean>-->
 
 </beans>
