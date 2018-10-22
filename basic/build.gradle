@@ -45,4 +45,6 @@ dependencies {
     // https://mvnrepository.com/artifact/io.netty/netty-all
     compile group: 'io.netty', name: 'netty-all', version: '4.1.30.Final'
 
+    compile 'com.github.ben-manes.caffeine:caffeine:2.6.2'
+
 }

@@ -191,4 +191,12 @@ public class MyTest<T> implements Serializable, Cloneable {
         ((ArrayList<String>) list).ensureCapacity(7);
         System.out.println(list.size());
     }
+
+    @Test
+    public void test15(){
+        List<String> list = new ArrayList<String>(){{
+            add("test");
+        }};
+        System.out.println(list.getClass());
+    }
 }

@@ -33,8 +33,14 @@ public class LogMain {
             loggerConfig.setLevel(Level.toLevel(level, fromLevel));
             ctx.updateLoggers();
         }
-        //logger = LoggerFactory.getLogger(LogMain.class);
+        logger = LoggerFactory.getLogger(LogMain.class);
         logger.debug("2. debug msg.");
+
+        new Thread(() -> {
+                Logger logger = LoggerFactory.getLogger(LogMain.class);
+                logger.info("1. new thread info msg.");
+                logger.debug("2. new thread debug msg.");
+        }).start();
     }
 
     static void displayLevel(Level level){
