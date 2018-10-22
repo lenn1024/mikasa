@@ -60,4 +60,8 @@ dependencies {
     // aspect
     compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.8.9'
     compile group: 'org.aspectj', name: 'aspectjrt', version: '1.8.9'
+
+    // akka
+    compile group: 'com.typesafe.akka', name: 'akka-actor_2.10', version: '2.3.6'
+    compile group: 'org.scala-lang', name: 'scala-library', version: '2.10.4'
 }
