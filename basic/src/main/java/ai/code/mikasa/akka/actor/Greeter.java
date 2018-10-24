@@ -13,9 +13,10 @@ public class Greeter extends UntypedActor {
     String greeting = "";
 
     public void onReceive(Object message) {
+
         if (message instanceof WhoToGreet){
             greeting = "hello, " + ((WhoToGreet) message).who;
-            logger.info(greeting);
+            logger.info("set greeting msg: {}.", greeting);
         } else if (message instanceof Greet){
             getSender().tell(new Greeting(greeting), getSelf());
             logger.info("tell ....");
