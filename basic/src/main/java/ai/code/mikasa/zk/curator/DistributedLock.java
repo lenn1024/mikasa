@@ -6,6 +6,9 @@ import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.CountDownLatch;
 
+/**
+ * 分布式锁
+ */
 public class DistributedLock {
     private static Logger logger = LoggerFactory.getLogger(DistributedLock.class);
 

@@ -6,6 +6,9 @@ import org.apache.curator.framework.recipes.leader.LeaderSelectorListenerAdapter
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * master 选举
+ */
 public class MasterSelector {
     private static Logger logger = LoggerFactory.getLogger(MasterSelector.class);
 
