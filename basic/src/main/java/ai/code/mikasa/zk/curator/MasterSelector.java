@@ -19,7 +19,7 @@ public class MasterSelector {
             @Override
             public void takeLeadership(CuratorFramework client) throws Exception {
                 logger.info("我成为了Master.");
-                Thread.sleep(1000);
+                Thread.sleep(3000);
                 logger.info("我完成了Master的操作，释放权利.");
             }
         });
