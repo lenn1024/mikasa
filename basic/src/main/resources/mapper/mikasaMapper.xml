@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="ai.code.mikasa.mybatis.entity.TestInfo">
+
+    <select id="selectOne" resultType="ai.code.mikasa.mybatis.entity.TestInfo" parameterType="int">
+        SELECT * FROM test_info WHERE id = #{id}
+    </select>
+
+    <insert id="insertItem" parameterType="ai.code.mikasa.mybatis.entity.TestInfo" useGeneratedKeys="true">
+        INSERT INTO test_info(name) values (#{name})
+    </insert>
+</mapper>

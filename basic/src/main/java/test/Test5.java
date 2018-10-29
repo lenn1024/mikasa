@@ -20,7 +20,11 @@ public class Test5 {
                 TimeUnit.SECONDS,
                 new ArrayBlockingQueue<Runnable>(1),
                 Executors.defaultThreadFactory(),
+                // 对多余的任务采取拒绝策略
                 new ThreadPoolExecutor.AbortPolicy());
+
+        // 预先启动所有核心线程
+        threadPoolExecutor.prestartAllCoreThreads();
 
         for(int i = 0; i < 10; i++){
             final int index = i;
