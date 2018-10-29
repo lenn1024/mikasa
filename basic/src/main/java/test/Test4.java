@@ -2,6 +2,8 @@ package test;
 
 import java.io.Serializable;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 public class Test4 implements Serializable, Cloneable {
     private String value;
@@ -24,7 +26,23 @@ public class Test4 implements Serializable, Cloneable {
 //        Constructor constructor = Test4.class.getConstructor(String.class);
 //        System.out.println(constructor.toGenericString());
 
-        Constructor constructor = Person.class.getConstructor(String.class, int.class);
-        System.out.println(constructor.toGenericString());
+//        Constructor constructor = Person.class.getConstructor(String.class, int.class);
+//        System.out.println(constructor.toGenericString());
+        try {
+            Class<Person> personClass = (Class<Person>) Test4.class.getClassLoader().loadClass("test.Person");
+            Person person = personClass.newInstance();
+
+            Method method = personClass.getMethod("say", new Class[]{String[].class});
+            method.invoke(person, new Object[]{new String[]{"aa", "bb"}});
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
     }
 }

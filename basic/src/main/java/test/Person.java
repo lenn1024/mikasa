@@ -11,6 +11,9 @@ public class Person {
     private String name;
     private int age;
 
+    public Person() {
+    }
+
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
@@ -21,5 +24,11 @@ public class Person {
         logger.info("sdsdfdsf{}");
         Constructor constructor = Test4.class.getConstructor(String.class);
         System.out.println(constructor.toGenericString());
+    }
+
+    public void say(String[] words){
+        for(String word: words){
+            System.out.println(word);
+        }
     }
 }
