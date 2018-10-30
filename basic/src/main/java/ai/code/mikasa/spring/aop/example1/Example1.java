@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Example1 {
     public static void main(String[] args){
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring/example1.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring/aop/example1.xml");
         Performer performer = (Performer) applicationContext.getBean("performer");
         performer.perform();
     }

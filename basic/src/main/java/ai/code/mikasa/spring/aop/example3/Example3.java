@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Example3 {
     public static void main(String[] args){
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring/example3.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring/aop/example3.xml");
         Thinker thinker= (Thinker)applicationContext.getBean("thinker");
         thinker.thinkOfSomething("Queen of Hearts!");
 
