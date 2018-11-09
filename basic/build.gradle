@@ -26,6 +26,7 @@ dependencies {
     compile group: 'com.github.sgroschupf', name: 'zkclient', version: '0.1'
     compile group: 'org.apache.curator', name: 'curator-framework', version: '2.11.1'
     compile group: 'org.apache.curator', name: 'curator-recipes', version: '2.11.1'
+    compile group: 'org.apache.curator', name: 'curator-test', version: '2.11.1'
 
     // json
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.6'
