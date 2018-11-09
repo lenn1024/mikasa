@@ -8,6 +8,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.lang.ref.PhantomReference;
 import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Created by lenn on 17/2/21.
@@ -18,11 +20,21 @@ public class IocMain {
     public static void main(String[] args){
         ApplicationContext context = new ClassPathXmlApplicationContext("spring/ioc/ioc-main.xml");
 
-        BeanLifeCycle beanLifeCycle = (BeanLifeCycle) context.getBean("beanLifeCycle");
+        logger.info("=========================================================");
+        logger.info("context id: {}.", context.getId());
+        logger.info("application name: {}.", context.getApplicationName());
+        logger.info("display name: {}.", context.getDisplayName());
+        logger.info("startup date: {}.", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(context.getStartupDate())));
+        logger.info("parent: {}.", context.getParent());
+
+        BeanLifeCycle beanLifeCycle = context.getBean("beanLifeCycle", BeanLifeCycle.class);
         logger.info("{}", beanLifeCycle);
 
-        TestClass testClass = (TestClass) context.getBean("testClass");
+        TestClass testClass = context.getBean("testClass", TestClass.class);
         logger.info("{}", testClass);
+
+        String[] alias = context.getAliases("testClass");
+        logger.info("alias: {}", alias);
 
         // 软引用
         SoftReference<Object> softReference = new SoftReference<>(new Object());
