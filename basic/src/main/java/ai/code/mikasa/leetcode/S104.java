@@ -1,4 +1,4 @@
-package leetcode;
+package ai.code.mikasa.leetcode;
 
 /**
  * 计算一棵树的深度

@@ -1,4 +1,4 @@
-package leetcode;
+package ai.code.mikasa.leetcode;
 
 import java.util.Stack;
 

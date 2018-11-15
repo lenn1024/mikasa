@@ -1,4 +1,4 @@
-package leetcode;
+package ai.code.mikasa.leetcode;
 
 public class S832 {
     public static void main(String[] args){

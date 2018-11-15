@@ -1,4 +1,4 @@
-package leetcode;
+package ai.code.mikasa.leetcode;
 
 /**
  * 判断一个数的二进制是否相邻两位为不同的
