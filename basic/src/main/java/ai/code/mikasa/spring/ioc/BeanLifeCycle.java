@@ -35,7 +35,7 @@ public class BeanLifeCycle implements BeanNameAware, BeanFactoryAware, Applicati
 
     @Override
     public void setBeanName(String name) {
-        logger.info("Call method setBeanName.");
+        logger.info("bean({}) Call method setBeanName.", name);
     }
 
     @Override
@@ -50,13 +50,13 @@ public class BeanLifeCycle implements BeanNameAware, BeanFactoryAware, Applicati
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        logger.info("Call method postProcessBeforeInitialization.");
+        logger.info("Bean name: {}, call method postProcessBeforeInitialization.", beanName);
         return bean;
     }
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        logger.info("Call method postProcessAfterInitialization.");
+        logger.info("Bean name: {}, Call method postProcessAfterInitialization.", beanName);
         return bean;
     }
 

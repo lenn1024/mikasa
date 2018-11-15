@@ -3,12 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="testClass" class="ai.code.mikasa.spring.ioc.TestClass"/>
+    <!--<bean id="testClass" class="ai.code.mikasa.spring.ioc.TestClass" lazy-init="true"/>-->
+    <bean id="testClass" name="testClass-alias1,testClass-alias2"
+          class="ai.code.mikasa.spring.ioc.TestClass" init-method="initMethod" />
 
-    <bean id="beanLifeCycle" class="ai.code.mikasa.spring.ioc.BeanLifeCycle"/>
-
-    <!--<bean id="beanLifeCycle" class="ai.code.mikasa.spring.ioc.BeanLifeCycle">-->
-        <!--<constructor-arg index="0" value="waw"></constructor-arg>-->
-    <!--</bean>-->
+    <bean id="beanLifeCycle" class="ai.code.mikasa.spring.ioc.BeanLifeCycle" scope="singleton">
+        <property name="name" value="beanLifeCycleCase"/>
+    </bean>
 
 </beans>
