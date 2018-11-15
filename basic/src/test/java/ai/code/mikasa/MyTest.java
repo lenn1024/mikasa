@@ -3,6 +3,8 @@ package ai.code.mikasa;
 import ai.code.mikasa.annotation.Joy;
 import org.junit.*;
 import org.junit.runners.MethodSorters;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.Serializable;
 import java.lang.annotation.Annotation;
@@ -16,6 +18,8 @@ import java.util.concurrent.*;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MyTest<T> implements Serializable, Cloneable {
 
+    private static Logger logger = LoggerFactory.getLogger(MyTest.class);
+
     private List<String> list;
 
     private transient int num;
@@ -24,7 +28,7 @@ public class MyTest<T> implements Serializable, Cloneable {
     private final String name = "ai.code.mikasa.MyTest";
 
     public MyTest(){
-        System.out.println("11111");
+        System.out.println("call constructor.");
     }
 
 //    public ai.code.mikasa.MyTest(String name){
@@ -198,5 +202,23 @@ public class MyTest<T> implements Serializable, Cloneable {
             add("test");
         }};
         System.out.println(list.getClass());
+    }
+
+    @Test
+    public void test16() throws InterruptedException {
+        ExecutorService executorService = Executors.newFixedThreadPool(5);
+        executorService.submit(() -> {
+            try {
+                Thread.currentThread().setName("thread-one");
+                logger.info("sleep 1s.");
+                Thread.sleep(10000);
+                logger.info("sleep end.");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+
+        executorService.awaitTermination(3, TimeUnit.SECONDS);
+        logger.info("execute end.");
     }
 }
