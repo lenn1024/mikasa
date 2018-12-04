@@ -16,6 +16,9 @@ public class ActorMain {
 
     public static void main(String[] args){
         inboxTest();
+
+        final ActorSystem system = ActorSystem.create("helloakka");
+        logger.info("actor system log level is " + system.settings().LogLevel());
     }
 
     public static void simpleTest(){
