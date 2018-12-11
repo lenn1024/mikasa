@@ -24,5 +24,6 @@ public class Greeter extends UntypedActor {
             logger.info("unhandled message.");
             unhandled(message);
         }
+        getContext();
     }
 }
