@@ -6,6 +6,9 @@ public class S905 {
         S905 instance = new S905();
         int[] A = instance.sortArrayByParity(new int[]{1, 2, 3, 4});
         System.out.println(A);
+        System.out.println(A);
+        System.out.println(A);
+        System.out.println(A);
     }
 
     public int[] sortArrayByParity(int[] A) {
