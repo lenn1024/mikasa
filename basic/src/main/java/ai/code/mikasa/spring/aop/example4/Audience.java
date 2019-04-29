@@ -19,6 +19,7 @@ public class Audience {
     @Pointcut( "execution(* waw.sakura.spring.aop.example4.Performer.perform(..))")
     void performance(){
     }
+
     @Before("performance()")
     public void takeSeats(){
         System.out.println("The audience is taking their seats.");

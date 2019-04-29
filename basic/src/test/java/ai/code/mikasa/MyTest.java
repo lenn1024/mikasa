@@ -9,9 +9,7 @@ import org.slf4j.LoggerFactory;
 import java.io.Serializable;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.*;
 
 @Joy("test annotation")
@@ -220,5 +218,37 @@ public class MyTest<T> implements Serializable, Cloneable {
 
         executorService.awaitTermination(3, TimeUnit.SECONDS);
         logger.info("execute end.");
+    }
+
+    @Test
+    public void test17(){
+        Map<String, String> map = new LinkedHashMap<>(16, .75F, true);
+
+        map.put("test1", "val");
+        map.put("test2", "val");
+        map.put("test3", "val");
+        map.put("test4", "val");
+
+        map.get("test1");
+
+        for(Map.Entry<String, String> entry: map.entrySet()){
+            System.out.println(entry.getKey());
+        }
+    }
+
+
+    @Test
+    public void test18(){
+        System.out.println(tableSizeFor(9));
+    }
+
+    static final int tableSizeFor(int cap) {
+        int n = cap - 1;
+        n |= n >>> 1;
+        n |= n >>> 2;
+        n |= n >>> 4;
+        n |= n >>> 8;
+        n |= n >>> 16;
+        return (n < 0) ? 1 : (n >= 2 << 30) ? 2 << 30 : n + 1;
     }
 }

@@ -15,5 +15,7 @@ public class Client {
                 handler);
         // 调用相关方法
         proxy.doSomething();
+
+
     }
 }

@@ -1,7 +1,5 @@
 package ai.code.mikasa.jackson;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 public class People {
     private String name;
     private int age;
