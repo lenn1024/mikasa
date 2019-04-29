@@ -114,7 +114,7 @@ public class ExclusiveLock {
      */
     public void unLock(){
         if(!isOwnLock){
-            throw new IllegalStateException(getThreadName() + " - Illegal Operation: can not unlock the lock if this thread does not own the lock.");
+            throw new IllegalStateException(getThreadName() + " - Illegal Operation: can not unlock the lock if this t1 does not own the lock.");
         }
 
         try {

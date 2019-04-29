@@ -207,7 +207,7 @@ public class MyTest<T> implements Serializable, Cloneable {
         ExecutorService executorService = Executors.newFixedThreadPool(5);
         executorService.submit(() -> {
             try {
-                Thread.currentThread().setName("thread-one");
+                Thread.currentThread().setName("t1-one");
                 logger.info("sleep 1s.");
                 Thread.sleep(10000);
                 logger.info("sleep end.");

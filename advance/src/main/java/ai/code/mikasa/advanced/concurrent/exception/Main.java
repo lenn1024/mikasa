@@ -12,10 +12,10 @@ public class Main {
             }
         };
 
-//        ThreadGroup group = thread.getThreadGroup();
-//        Thread.UncaughtExceptionHandler handler = thread.getUncaughtExceptionHandler();
-//        thread.setUncaughtExceptionHandler(new MyExceptionHandler());
-//        Thread.UncaughtExceptionHandler handler1 = thread.getUncaughtExceptionHandler();
+//        ThreadGroup group = t1.getThreadGroup();
+//        Thread.UncaughtExceptionHandler handler = t1.getUncaughtExceptionHandler();
+//        t1.setUncaughtExceptionHandler(new MyExceptionHandler());
+//        Thread.UncaughtExceptionHandler handler1 = t1.getUncaughtExceptionHandler();
 
         thread.start();
     }

@@ -3,13 +3,30 @@ package ai.code.mikasa.concurrent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.concurrent.CompletionService;
-import java.util.concurrent.ExecutorCompletionService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 public class CompletionServiceMain {
     private static Logger logger = LoggerFactory.getLogger(CompletionServiceMain.class);
     public static void main(String[] args) throws InterruptedException {
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(
+                20,
+                20,
+                60,
+                TimeUnit.SECONDS,
+                new ArrayBlockingQueue<Runnable>(1),
+                Executors.defaultThreadFactory(),
+                new ThreadPoolExecutor.CallerRunsPolicy()
+        );
+
+
+        threadPoolExecutor.submit(() -> {
+            System.out.println("============ start ==========");
+
+            System.out.println("============ end ============");
+        });
+    }
+
+    public static void test() throws InterruptedException {
         CompletionService<String> completionService = new ExecutorCompletionService<String>(Executors.newFixedThreadPool(5));
 
         completionService.submit(() -> {

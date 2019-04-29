@@ -19,7 +19,7 @@ public class Bank {
                 @Override
                 public void run() {
                     for(int i= 0; i< 100; i++){
-                        //System.out.println("thread " + i + ":");
+                        //System.out.println("t1 " + i + ":");
                         //System.out.println("from [" + from + "] to [" + to + "]:" + number);
                         bank.account ++;
                     }

@@ -11,10 +11,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import scala.concurrent.duration.Duration;
 
+import java.util.concurrent.TimeoutException;
+
 public class ActorMain {
     private static final Logger logger = LoggerFactory.getLogger(ActorMain.class);
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws TimeoutException {
         inboxTest();
 
         final ActorSystem system = ActorSystem.create("helloakka");
@@ -29,7 +31,7 @@ public class ActorMain {
         greeter.tell(new Object(), ActorRef.noSender());
     }
 
-    public static void inboxTest(){
+    public static void inboxTest() throws TimeoutException {
         final ActorSystem system = ActorSystem.create("helloakka");
         final ActorRef greeter = system.actorOf(Props.create(Greeter.class), "greeter");
 

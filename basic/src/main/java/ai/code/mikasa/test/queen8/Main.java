@@ -17,6 +17,6 @@ public class Main {
         thread.setDaemon(true);
         thread.start();
 
-        System.out.println("main thread run and exit.");
+        System.out.println("main t1 run and exit.");
     }
 }
