@@ -251,4 +251,12 @@ public class MyTest<T> implements Serializable, Cloneable {
         n |= n >>> 16;
         return (n < 0) ? 1 : (n >= 2 << 30) ? 2 << 30 : n + 1;
     }
+
+    @Test
+    public void test19(){
+        Map<Integer, Integer> map = new LinkedHashMap<>();
+        map.put(1, 1);
+        map.put(2, 2);
+        map.put(3, 3);
+    }
 }
