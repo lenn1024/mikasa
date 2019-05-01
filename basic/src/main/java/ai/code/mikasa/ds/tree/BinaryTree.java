@@ -139,7 +139,7 @@ public class BinaryTree {
 
         // 转换为list
         List<TreeNode<T>> list = Arrays.stream(array)
-                .map(item -> new TreeNode<T>(item, null, null))
+                .map(item -> new TreeNode<>(item, null, null))
                 .collect(Collectors.toList());
 
         // 遍历数组，构造对应的树
