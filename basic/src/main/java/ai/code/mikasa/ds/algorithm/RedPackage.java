@@ -22,9 +22,9 @@ public class RedPackage {
         int restAmount = amount;
         int restPeople = peopleNum;
         for(int i = 0; i < peopleNum; i++){
-            int redpackage = random.nextInt(restAmount/restPeople * 2 - 2) + 1;
-            redPackages.add(redpackage);
-            restAmount = restAmount - redpackage;
+            int redPackage = random.nextInt(restAmount/restPeople * 2 - 2) + 1;
+            redPackages.add(redPackage);
+            restAmount = restAmount - redPackage;
             restPeople--;
         }
 
