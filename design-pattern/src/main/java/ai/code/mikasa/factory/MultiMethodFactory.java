@@ -1,8 +1,8 @@
 package ai.code.mikasa.factory;
 
-import waw.sakura.dp.factory.product.Product;
-import waw.sakura.dp.factory.product.ProductA;
-import waw.sakura.dp.factory.product.ProductB;
+import ai.code.mikasa.factory.product.Product;
+import ai.code.mikasa.factory.product.ProductA;
+import ai.code.mikasa.factory.product.ProductB;
 
 /**
  * Created by lenn on 16/4/14.

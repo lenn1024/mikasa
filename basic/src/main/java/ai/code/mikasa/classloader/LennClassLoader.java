@@ -3,6 +3,9 @@ package ai.code.mikasa.classloader;
 import java.io.FileInputStream;
 import java.io.IOException;
 
+/**
+ * 自定义ClassLoader
+ */
 public class LennClassLoader extends ClassLoader {
     private String classPath;
 

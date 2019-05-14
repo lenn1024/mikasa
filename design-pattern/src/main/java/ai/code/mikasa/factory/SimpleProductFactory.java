@@ -1,12 +1,12 @@
 package ai.code.mikasa.factory;
 
-import waw.sakura.dp.factory.product.Product;
-import waw.sakura.dp.factory.product.ProductA;
-import waw.sakura.dp.factory.product.ProductB;
+import ai.code.mikasa.factory.product.Product;
+import ai.code.mikasa.factory.product.ProductA;
+import ai.code.mikasa.factory.product.ProductB;
 
 /**
  * Created by lenn on 16/4/14.
- * 简单工厂,也叫做普通工厂
+ß * 简单工厂,也叫做普通工厂
  * 普通工厂模式就是建立一个工厂类，对实现了同一接口的一些类进行实例的创建。
  */
 public class SimpleProductFactory {
