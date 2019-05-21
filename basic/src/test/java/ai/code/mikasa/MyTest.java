@@ -57,7 +57,16 @@ public class MyTest<T> implements Serializable, Cloneable {
     }
 
     @Test
-    public void test(){
+    public void test22() {
+    }
+
+    @Test
+    public void test21() throws InterruptedException {
+        new Object().wait();
+    }
+
+    @Test
+    public void test20(){
         TestCaseClass testCaseClass = new TestCaseClass();
         Assert.assertTrue(testCaseClass.add(1, 2) == 3);
 //        Assert.assertTrue("错了，哈哈。", testCaseClass.add(1, 2) == 4);

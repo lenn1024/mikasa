@@ -1,4 +1,4 @@
-package sort;
+package ai.code.mikasa.ds.algorithm;
 
 import java.util.*;
 

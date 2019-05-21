@@ -1,4 +1,4 @@
-package sort;
+package ai.code.mikasa.ds.sort;
 
 /**
  * Created by lenn on 17/2/20.
