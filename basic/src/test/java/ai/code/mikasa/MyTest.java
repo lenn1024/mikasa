@@ -57,7 +57,18 @@ public class MyTest<T> implements Serializable, Cloneable {
     }
 
     @Test
+    public void test23(){
+        String s1 = "abcdefg";
+        String s2 = "abcdefg";
+        String s3 = new String("abcdefg");
+        System.out.println(s1 == s2);
+        System.out.println(s2 == s3);
+        System.out.println(s2 == s3.intern());
+    }
+
+    @Test
     public void test22() {
+
     }
 
     @Test
