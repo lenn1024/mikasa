@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.context.request.async.DeferredResult;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -42,9 +43,20 @@ public class WebController {
     }
 
     @RequestMapping("/testservlet3")
-    public String testServlet3(HttpServletRequest request){
+    @ResponseBody
+    public DeferredResult<String> testServlet3(HttpServletRequest request){
+        DeferredResult<String> result = new DeferredResult<>();
 
-        return "success";
+        new Thread(() -> {
+            try {
+                Thread.sleep(300);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            result.setResult("async spring mvc.");
+        }).start();
+
+        return result;
     }
 
 }
