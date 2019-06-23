@@ -72,4 +72,6 @@ dependencies {
     // akka
     compile group: 'com.typesafe.akka', name: 'akka-actor_2.12', version: '2.5.18'
     compile group: 'org.scala-lang', name: 'scala-library', version: '2.10.4'
+
+    compile 'com.netflix.hystrix:hystrix-core:1.5.18'
 }
