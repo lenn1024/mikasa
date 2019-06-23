@@ -1,4 +1,4 @@
-package ai.code.mikasa.ds.algorithm;
+package ai.code.mikasa.ds.algorithm.dp;
 
 public class Ngrid {
     public static void main(String[] args){

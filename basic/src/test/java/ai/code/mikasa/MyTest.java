@@ -67,8 +67,8 @@ public class MyTest<T> implements Serializable, Cloneable {
     }
 
     @Test
-    public void test22() {
-
+    public void test22() throws InterruptedException {
+        Thread.sleep(20000);
     }
 
     @Test

@@ -37,6 +37,8 @@ dependencies {
     // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
     compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
 
+    compile group: 'com.netflix.hystrix', name: 'hystrix-core', version: 'x.y.z'
+
 //    // https://mvnrepository.com/artifact/org.icepdf/icepdf-core
 //    compile group: 'org.icepdf.os', name: 'icepdf-core', version: '6.1.2'
 //    // https://mvnrepository.com/artifact/org.icepdf/icepdf-viewer
