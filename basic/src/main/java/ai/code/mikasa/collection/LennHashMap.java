@@ -3,7 +3,7 @@ package ai.code.mikasa.collection;
 import java.io.Serializable;
 import java.util.*;
 
-public class HashMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Serializable {
+public class LennHashMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Serializable {
 
     private static final long serialVersionUID = 1151163857123648488L;
 
@@ -27,13 +27,13 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Seria
     /**
      * constructor
      */
-    public HashMap() {
+    public LennHashMap() {
         threshold = (int)(DEFAULT_CAPACITY * DEFAULT_LOADFACTOR);
         loadFactor = DEFAULT_LOADFACTOR;
         table = new Node[DEFAULT_CAPACITY];
     }
 
-//    public HashMap(int initialCapacity, float loadFactor){
+//    public LennHashMap(int initialCapacity, float loadFactor){
 //        this.loadFactor = loadFactor;
 //
 //    }
@@ -179,7 +179,7 @@ public class HashMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Seria
 
     @Override
     public String toString() {
-        return "HashMap{" +
+        return "LennHashMap{" +
                 "threshold=" + threshold +
                 ", table=" + Arrays.toString(table) +
                 ", size=" + size +

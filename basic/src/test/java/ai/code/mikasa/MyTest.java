@@ -57,6 +57,12 @@ public class MyTest<T> implements Serializable, Cloneable {
     }
 
     @Test
+    public void test24(){
+        System.out.println(1 << 30);
+        System.out.println((1 << 30) + 1);
+    }
+
+    @Test
     public void test23(){
         String s1 = "abcdefg";
         String s2 = "abcdefg";
@@ -67,8 +73,18 @@ public class MyTest<T> implements Serializable, Cloneable {
     }
 
     @Test
-    public void test22() throws InterruptedException {
-        Thread.sleep(20000);
+    public void test22() {
+        List<String> list = new ArrayList<String>(){{
+            add("dog");
+            add("cat");
+            add("monkey");
+        }};
+
+        for(String item: list){
+            if(item.equals("dog")){
+                list.remove(item);
+            }
+        }
     }
 
     @Test

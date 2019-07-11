@@ -1,11 +1,10 @@
 package ai.code.mikasa.collection;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class TestMain {
     public static void main(String[] args){
-        HashMap<Integer, Integer> map= new HashMap<>();
-        map.put(1, 1);
-        map.put(1, 1);
-        map.put(2, 2);
-        // System.out.println(map);
+        Map<String, String> map = new HashMap<>(17);
     }
 }

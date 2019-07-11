@@ -33,7 +33,7 @@ public class SourceView {
     private PriorityQueue<String> priorityQueue;
 
     private Map<String, String> map;
-    private HashMap<String, String> hashMap;
+    private LennHashMap<String, String> hashMap;
     private LinkedHashMap<String, String> linkedHashMap;
     private TreeMap<String, String> treeMap;
 
